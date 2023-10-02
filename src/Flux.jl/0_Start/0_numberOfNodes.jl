@@ -25,7 +25,6 @@ plots = [];
 
 for i in eachindex(n_nodes)
     n = n_nodes[i];
-    model = models[i];
     p = plot(x -> f(x), lower, upper, label = "Exact function: f(x) = 2x - x³");
     push!(plots, p);
     scatter!(x -> models[i]([x]), range, label = "Model output, n = $n");
